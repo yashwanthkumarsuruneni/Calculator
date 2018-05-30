@@ -10,6 +10,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './'
   },
+  devtool: 'inline-source-map',
   module: {
          rules: [
             {
