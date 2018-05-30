@@ -1,0 +1,30 @@
+{
+  "name": "simplecalculator-rxjs",
+  "version": "1.0.0",
+  "description": "a simple calculator using rxjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack", 
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [
+    "rxjs",
+    "es6",
+    "calculator"
+  ],
+  "author": "yashwanth",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0"
+  }
+}
