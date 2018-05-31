@@ -1,10 +1,20 @@
 import './styles.css';
 
 import { Observable } from 'rxjs/Observable';
+// Static methods
+import 'rxjs/add/observable/from';
+import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/observable/merge';
+import 'rxjs/add/observable/of';
+
+
+// Operators
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeAll';
+
+
+
 
 
 
