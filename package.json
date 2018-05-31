@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack && webpack-dev-server --open && webpack --watch"
+    "start": "rimraf dist && webpack && webpack-dev-server --open && webpack --watch"
   },
   "keywords": [
     "rxjs",
@@ -17,17 +17,19 @@
   "author": "yashwanth",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.4",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "rxjs": "^6.2.0"
+    "rxjs": "^5.4.2"
   }
 }
