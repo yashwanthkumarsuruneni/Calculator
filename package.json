@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "rimraf dist && webpack && webpack-dev-server --open && webpack --watch"
+    "start": "webpack && webpack-dev-server --open && webpack --watch"
   },
   "keywords": [
     "rxjs",
