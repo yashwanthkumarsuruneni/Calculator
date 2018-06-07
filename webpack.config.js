@@ -1,7 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
+
+const devMode = process.env.NODE_ENV === 'production'
+
+console.log(process.env.NODE_ENV);
 
 module.exports = {
   entry: {
@@ -18,7 +23,10 @@ module.exports = {
       template: 'src/index.html'
     }),
      new webpack.NamedModulesPlugin(),
-     new webpack.HotModuleReplacementPlugin()
+     new webpack.HotModuleReplacementPlugin(),
+     new MiniCssExtractPlugin({
+      filename: "[name].css"
+    })
   ],
   module: {
     rules: [
@@ -31,13 +39,9 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: [{
-          loader: 'style-loader' // creates style nodes from JS strings
-        }, {
-          loader: 'css-loader' // translates CSS into CommonJS
-        }, {
-          loader: 'less-loader' // compiles Less to CSS
-        }]
+        use: [ devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+        'css-loader',
+        'less-loader',]
       }
     ]
  },
