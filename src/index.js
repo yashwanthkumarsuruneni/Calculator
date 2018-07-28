@@ -26,6 +26,8 @@ let display = false; // Boolean to hide the input after we hit the operator
 
 const buttons = document.getElementsByClassName("button-item");
 
+console.log(buttons);
+
 
 
 
